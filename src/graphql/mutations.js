@@ -3,8 +3,8 @@
 
 export const createNote = /* GraphQL */ `
   mutation CreateNote(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+    $input: CreateNoteInput!
+    $condition: ModelNoteConditionInput
   ) {
     createNote(input: $input, condition: $condition) {
       id
@@ -16,12 +16,12 @@ export const createNote = /* GraphQL */ `
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updateNote = /* GraphQL */ `
+  mutation UpdateNote(
+    $input: UpdateNoteInput!
+    $condition: ModelNoteConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updateNote(input: $input, condition: $condition) {
       id
       name
       description
@@ -33,8 +33,8 @@ export const updateTodo = /* GraphQL */ `
 `;
 export const deleteNote = /* GraphQL */ `
   mutation DeleteNote(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+    $input: DeleteNoteInput!
+    $condition: ModelNoteConditionInput
   ) {
     deleteNote(input: $input, condition: $condition) {
       id
